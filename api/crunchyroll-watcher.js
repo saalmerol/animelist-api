@@ -7,16 +7,15 @@ var watcher = new Watcher(feed, interval)
 
 // Check for new entries every n seconds.
 watcher.on('new entries', function (entries) {
-  entries.forEach(function (entry) {
-    console.log(entry.title)
-    io.sockets.emit('message', entry);
-  })
+  console.log(entries[0].title)
+  io.sockets.emit('message', entries[0]);
 })
 
 // Start watching the feed.
 watcher
   .start()
   .then(function (entries) {
+    console.log(entries[0].title)
     io.on('connection', function(client) {
         console.log('Client connected...');
         client.on('join', function(data) {
