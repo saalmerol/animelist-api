@@ -15,12 +15,12 @@ watcher.on('new entries', function (entries) {
 watcher
   .start()
   .then(function (entries) {
-    console.log(entries[0].title)
     io.on('connection', function(client) {
-        console.log('Client connected...');
-        client.on('join', function(data) {
-            console.log(data);
-        });
+      console.log(entries[0].title)
+      console.log('Client connected...');
+      client.on('join', function(data) {
+          console.log(data);
+      });
     });
   })
   .catch(function(error) {
