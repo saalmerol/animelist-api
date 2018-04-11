@@ -6,7 +6,7 @@ var appRouter = function (app) {
     res.status(200).send({ message: 'Welcome to api.anime.miyata.moe!' });
   });
 
-  app.get("/encyclopedia/:page", function (req, res) {
+  app.get("/animes/:page", function (req, res) {
     animeEncylopedia.getAllAnime(req.params.page).then((data) => {
       res.status(200).send(data);
     })
