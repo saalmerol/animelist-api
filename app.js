@@ -21,4 +21,4 @@ routes(app);
 
 server.listen(3031);
 
-io.set('origins', 'http://127.0.0.1:3031')
+io.set('origins', '*')
