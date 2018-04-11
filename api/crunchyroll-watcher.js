@@ -16,7 +16,7 @@ watcher
   .start()
   .then(function (entries) {
     io.on('connection', function(client) {
-      console.log(entries[0])
+      console.log(entries[0].title)
       console.log('Client connected...');
       client.on('join', function(data) {
           console.log(data);
