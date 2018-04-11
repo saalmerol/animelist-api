@@ -20,5 +20,3 @@ app.use(function(req, res, next) {
 routes(app);
 
 server.listen(3031);
-
-io.set('origins', '*')
