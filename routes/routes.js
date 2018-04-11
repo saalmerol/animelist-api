@@ -3,7 +3,7 @@ var animeEncylopedia = require("../api/animenewsnetwork.js")
 
 var appRouter = function (app) {
   app.get("/", function (req, res) {
-    res.status(200).send({ message: 'Welcome to api.anime.miyata.moe!' });
+    res.sendFile(__dirname + '/index.html');
   });
 
   app.get("/animes/:page", function (req, res) {

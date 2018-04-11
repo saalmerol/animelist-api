@@ -3,6 +3,11 @@ var bodyParser = require("body-parser");
 var routes = require("./routes/routes.js");
 var app = express();
 
+var server = require('http').createServer(app);
+global.io = require('socket.io')(server)
+
+var crunchyroll = require("./api/crunchyroll-watcher.js");
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -14,6 +19,6 @@ app.use(function(req, res, next) {
 
 routes(app);
 
-var server = app.listen(3031, function () {
-    console.log("app running on port.", server.address().port);
-});
+server.listen(3031);
+
+io.set('origins', 'http://127.0.0.1:3031')
