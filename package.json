@@ -1,0 +1,23 @@
+{
+  "name": "animelist-api",
+  "version": "1.0.0",
+  "description": "A simple REST api for listing animes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Son Roy Almerol",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "casperjs": "^1.1.4",
+    "cheerio": "^1.0.0-rc.2",
+    "datejs": "^1.0.0-rc3",
+    "express": "^4.16.3",
+    "faker": "^4.1.0",
+    "jsdom": "^11.7.0",
+    "moment": "^2.22.0",
+    "puppeteer": "^1.2.0"
+  }
+}
