@@ -18,10 +18,10 @@ watcher
     io.on('connection', function(client) {
       console.log(entries[0].title)
       console.log('Client connected...');
-      client.on('join', function(data) {
-        client.emit('recentfeed', entries);
+      client.emit('recentfeed', entries);
+      /* client.on('join', function(data) {
         console.log(data);
-      });
+      }); */
     });
   })
   .catch(function(error) {
