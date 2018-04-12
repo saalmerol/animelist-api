@@ -19,7 +19,8 @@ watcher
       console.log(entries[0].title)
       console.log('Client connected...');
       client.on('join', function(data) {
-          console.log(data);
+        client.emit('recentfeed', entries);
+        console.log(data);
       });
     });
   })
