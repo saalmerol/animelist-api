@@ -18,7 +18,6 @@ watcher
     io.on('connection', function(client) {
       console.log(entries[0].title)
       console.log('Client connected...');
-      client.emit('recentfeed', entries);
       /* client.on('join', function(data) {
         console.log(data);
       }); */
